@@ -1,5 +1,5 @@
-# Ëàáîðàòîðíàÿ ðàáîòà ¹5
-# Íàïèñàíèå êëàññîâ
+# Лабораторная работа №5
+# Написание классов
 
 
 j <- list(
@@ -12,36 +12,36 @@ j <- list(
 class(j) <- "Auto"
 
 print.Auto <- function(wk){
-  cat("Ïðîèçâîäèòåëü:", j$manufacturer, "\n")
-  cat("Êîëè÷åñòâî êîëåñ:", j$wheels, "\n")
-  cat("Öâåò", j$colour, "\n")
-  cat("Ïàññàæèðñêèõ ñèäåíèé:", j$seats, "\n")
-  cat("Íàçâàíèå:", wk$name, "\n")
-  cat("Òèï òîïëèâà:", wk$fuel)
+  cat("Производитель:", j$manufacturer, "\n")
+  cat("Количество колес:", j$wheels, "\n")
+  cat("Цвет:", j$colour, "\n")
+  cat("Пассажирских мест:", j$seats, "\n")
+  cat("Название:", wk$name, "\n")
+  cat("Тип топлива:", wk$fuel)
 }
 
 
 a <- list(
   name = "Ford",
-  fuel = "áåíçèíîâûé"
+  fuel = "бензиновый"
 )
 class(a) <- c("NewAuto1", "Auto")
 
 b <- list(
   name = "Fiat",
-  fuel = "äèçåëüíûé"
+  fuel = "дизельный"
 )
 class(b) <- c("NewAuto2", "Auto")
 
 m <- list(
   name = "Tesla",
-  fuel = "Ýëåêòðè÷åñêèé"
+  fuel = "Электрический"
 )
 class(m) <- c("NewAuto3", "Auto")
 
 
 infa <- function(){
-  v <- readline("Èíôîðìïàöèþ î êàêîé ìàøèíå âû õîòèòå óçíàòü (Ford, Fiat, Tesla)?: ")
+  v <- readline("Информацию о каком автомобиле вы хотите (Ford, Fiat, Tesla)?: ")
   if(v == "Ford") print.Auto(a)
   if(v == "Fiat") print.Auto(b)
   if(v == "Tesla") print.Auto(m)

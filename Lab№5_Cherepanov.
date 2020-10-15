@@ -1,0 +1,50 @@
+# Ëàáîðàòîðíàÿ ðàáîòà ¹5
+# Íàïèñàíèå êëàññîâ
+
+
+j <- list(
+  manufacturer = "Japan",
+  wheels = 4,
+  colour = "Red",
+  seats = 3 
+)
+
+class(j) <- "Auto"
+
+print.Auto <- function(wk){
+  cat("Ïðîèçâîäèòåëü:", j$manufacturer, "\n")
+  cat("Êîëè÷åñòâî êîëåñ:", j$wheels, "\n")
+  cat("Öâåò", j$colour, "\n")
+  cat("Ïàññàæèðñêèõ ñèäåíèé:", j$seats, "\n")
+  cat("Íàçâàíèå:", wk$name, "\n")
+  cat("Òèï òîïëèâà:", wk$fuel)
+}
+
+
+a <- list(
+  name = "Ford",
+  fuel = "áåíçèíîâûé"
+)
+class(a) <- c("NewAuto1", "Auto")
+
+b <- list(
+  name = "Fiat",
+  fuel = "äèçåëüíûé"
+)
+class(b) <- c("NewAuto2", "Auto")
+
+m <- list(
+  name = "Tesla",
+  fuel = "Ýëåêòðè÷åñêèé"
+)
+class(m) <- c("NewAuto3", "Auto")
+
+
+infa <- function(){
+  v <- readline("Èíôîðìïàöèþ î êàêîé ìàøèíå âû õîòèòå óçíàòü (Ford, Fiat, Tesla)?: ")
+  if(v == "Ford") print.Auto(a)
+  if(v == "Fiat") print.Auto(b)
+  if(v == "Tesla") print.Auto(m)
+}
+infa()
+
